@@ -1,6 +1,7 @@
 ## PBA : What is this  ?
 PBA stand for Port Block Allocation. It is a well-known method in Telco environments to map a subscriber's private IP address with a public address using source NAT & PAT while reducing large log storage that traditionnal firewall/NAT device generates. In a nutshell, subscriber get allocated a range of ports ( usually between 128 & 1024 ) with a public IP and a single log is generated for every session in this pool.
 
+## Purpose of the script
 The junos-pba script will give you details about port-block allocation & subscribers port usage in a CGNAT/Juniper SRX environment where the PBA feature is used. It is a great source of information and will come in addition to the Junos CLI to make smart choices when sizing your IP pools & blocks.
 
 ## Explanation & Motivation
