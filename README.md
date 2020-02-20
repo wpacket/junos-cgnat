@@ -1,4 +1,4 @@
-# PBA & junos-pba script : What is it ?
+## PBA : What is this  ?
 PBA stand for Port Block Allocation. It is a well-known method in Telco environments to map a subscriber's private IP address with a public address using source NAT & PAT while reducing large log storage that traditionnal firewall/NAT device generates. In a nutshell, subscriber get allocated a range of ports ( usually between 128 & 1024 ) with a public IP and a single log is generated for every session in this pool.
 
 The junos-pba script will give you details about port-block allocation & subscribers port usage in a CGNAT/Juniper SRX environment where the PBA feature is used. It is a great source of information and will come in addition to the Junos CLI to make smart choices when sizing your IP pools & blocks.
@@ -12,7 +12,7 @@ You first need you to extract the port-block table from the SRX cluster on your 
 show security nat source port-block pool xxx node xxx | save table.txt
 ```
    
-Once this is done you can  run the script using the file as an argument in shell. I personnaly tested it on WLS, Debian & Ubuntu and it worked like a charm. For instance: 
+Once this is done you can run the script using the file as an argument in a shell. I personnaly tested it on WLS, Debian & Ubuntu and it worked like a charm. For instance: 
 ```
 # junos-pba.sh table.txt
 
